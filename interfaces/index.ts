@@ -1,17 +1,22 @@
-// Interface for Card component props
-export interface CardProps {
-  title: string;
-  imageUrl: string;
-  location: string;
-  price: string;
-  description?: string; // optional
+export interface Address {
+  state: string;
+  city: string;
+  country: string;
 }
 
-// Interface for Button component props
-export interface ButtonProps {
-  label: string;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  className?: string; // for additional styling
-  disabled?: boolean;
+export interface Offers {
+  bed: string;
+  shower: string;
+  occupants: string;
+}
+
+export interface PropertyProps {
+  name: string;
+  address: Address;
+  rating: number;
+  category: string[];
+  price: number;
+  offers: Offers;
+  image: string;
+  discount: string;
 }
